@@ -21,12 +21,8 @@ class Triangle
       return :equilateral 
     elsif(@side1 == @side2 || @side2 == @side3 || @side1 == @side3)
       return :isosceles
-    elsif(@side1 != @side2 && @side2 != @side3 && @side1 != @side3) 
+    else(@side1 != @side2 && @side2 != @side3 && @side1 != @side3) 
       return :scalene
-    else 
-      begin 
-        raise TriangleError 
-      end 
     end 
   end 
   class TriangleError < StandardError 
